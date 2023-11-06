@@ -1,0 +1,22 @@
+import numpy as np 
+p1x=int(input('ingrese el valor de x en p1(x,y): '))
+p1y=int(input('ingrese el valor de y en p1(x,y): '))
+print('p1(',p1x,',',p1y,')')
+print()
+
+p2x=int(input('ingrese el valor de x en p2(x,y): '))
+p2y=int(input('ingrese el valor de y en p2(x,y): '))
+print('p2(',p2x,',',p2y,')')
+print()
+
+p3x=int(input('ingrese el valor de x en p3(x,y): '))
+p3y=int(input('ingrese el valor de y en p3(x,y): '))
+print('p33(',p3x,',',p3y,')')
+print()
+
+a=np.array([[p1x**2,p1x,1], [p2x**2,p2x,1], [p3x**2,p3x,1]])
+b=np.array([p1y,p2y,p3y])
+
+x= np.linalg.solve(a,b)
+
+print("x= " , np.round(x,3))
